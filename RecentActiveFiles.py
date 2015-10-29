@@ -27,7 +27,11 @@ class RecentActiveFilesCommand(sublime_plugin.WindowCommand):
         else:
             items = [[os.path.basename(f), self.path_form_project(f)] for f in self.recent_active_files]
 
+            if len(items) > 0:
+                items.pop(0);
+
             def on_done(index):
+                index += 1
                 if index >= 0:
                     self.window.open_file(self.recent_active_files[index])
                 else:
@@ -38,4 +42,4 @@ class RecentActiveFilesCommand(sublime_plugin.WindowCommand):
                 if index >= 0:
                     self.window.open_file(self.recent_active_files[index], sublime.TRANSIENT)
 
-            self.window.show_quick_panel(items, on_done, sublime.MONOSPACE_FONT, -1, on_highlight)
+            self.window.show_quick_panel(items, on_done, 0, -1, on_highlight)
