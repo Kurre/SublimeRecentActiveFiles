@@ -1,7 +1,7 @@
 RecentActiveFiles
 ========
 
-Sublime Text 2 plugin that shows and opens recent activated files.
+Sublime Text 3 plugin that shows and opens recent activated files.
 
 ![Screenshot](http://i.imgur.com/T6kIQ.png)
 
@@ -15,4 +15,4 @@ $ git clone https://github.com/jugyo/SublimeRecentActiveFiles.git RecentActiveFi
 ```
 ## Usage
 
-The `recent_active_files` command is binded to `super+k + super+t`.
+The `recent_active_files` command is binded to `ctrl-e` (JetBrains keyboard shortcut).

@@ -1,6 +1,6 @@
 [
     {
-        "keys": ["super+k", "super+t"],
+        "keys": ["ctrl+e"],
         "command": "recent_active_files"
     }
 ]
