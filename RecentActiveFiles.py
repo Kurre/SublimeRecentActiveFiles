@@ -31,14 +31,12 @@ class RecentActiveFilesCommand(sublime_plugin.WindowCommand):
             items = [[os.path.basename(f), self.path_form_project(f), f] for f in self.recent_active_files]
 
             if len(items) > 0:
-                current = items.pop(0);
+                current = items.pop(0)
 
             def on_done(index):
                 if index >= 0:
-                    print("Opening index")
                     self.window.open_file(self.get_recent_file_by_name(items[index][2]))
                 else:
-                    print(self.recent_active_files)
                     if len(self.recent_active_files) > 0:
                         self.window.open_file(self.get_recent_file_by_name(current[2]))
 
